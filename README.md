@@ -96,6 +96,8 @@ The confusion matrix was:
 
 
 
+
+
 ## ROC Curve
 
 The model achieved a ROC-AUC score of **0.9533**, indicating strong ability to distinguish between High and Low performance classes.
@@ -110,9 +112,9 @@ The comparison of Accuracy, Precision, Recall, and F1-Score is available in `mod
 
 The dataset contains more Low-performance observations than High-performance observations. This class imbalance can affect model performance.
 
-The model achieved a recall of **75.69%** for the High class. This means that some genuinely high-performing students were predicted as Low.
+The model achieved a recall of 75.69% for the High class. This means that some genuinely high-performing students were predicted as Low.
 
-There were **79 false negatives** in the test set. Reducing these errors would be important if the model were used to identify high-performing students.
+There were 79 false negatives in the test set. Reducing these errors would be important if the model were used to identify high-performing students.
 
 ## Overfitting and Generalization
 
@@ -123,7 +125,7 @@ The model achieved:
 
 The difference between training and testing accuracy is small. Therefore, the model does not show evidence of severe overfitting and demonstrates reasonable generalization on the test data.
 
-## Model Limitations
+### Model Limitations
 
 Some limitations of this project are:
 
