@@ -93,3 +93,73 @@ The confusion matrix was:
 ```text
 [[947, 50],
  [79, 246]]
+
+## ROC Curve
+
+The model achieved a ROC-AUC score of **0.9533**, indicating strong ability to distinguish between High and Low performance classes.
+
+The ROC curve visualization is available in `roc_curve.png`.
+
+## Performance Visualization
+
+The comparison of Accuracy, Precision, Recall, and F1-Score is available in `model_performance_metrics.png`.
+
+## Error Analysis
+
+The dataset contains more Low-performance observations than High-performance observations. This class imbalance can affect model performance.
+
+The model achieved a recall of **75.69%** for the High class. This means that some genuinely high-performing students were predicted as Low.
+
+There were **79 false negatives** in the test set. Reducing these errors would be important if the model were used to identify high-performing students.
+
+## Overfitting and Generalization
+
+The model achieved:
+
+- **Training Accuracy:** 88.99%
+- **Testing Accuracy:** 90.24%
+
+The difference between training and testing accuracy is small. Therefore, the model does not show evidence of severe overfitting and demonstrates reasonable generalization on the test data.
+
+## Model Limitations
+
+Some limitations of this project are:
+
+- Only six numerical features were used.
+- Several categorical variables from the original dataset were not included in the baseline model.
+- The High/Low classification depends on the chosen threshold of 70.
+- A single train-test split was used for evaluation.
+- The model does not establish causal relationships between student factors and performance.
+- The model should be validated on an independent dataset before real-world use.
+
+## Future Improvements
+
+The model could be improved by:
+
+- Including relevant categorical features.
+- Using class weighting or resampling techniques to address class imbalance.
+- Comparing Logistic Regression with Decision Tree and Random Forest models.
+- Performing hyperparameter tuning.
+- Using cross-validation for more reliable evaluation.
+- Testing the model on an independent dataset.
+- Considering regression if predicting the exact examination score is required.
+
+## Technologies Used
+
+- Python
+- Pandas
+- NumPy
+- Scikit-learn
+- Matplotlib
+- Jupyter Notebook
+
+## Project Files
+
+```text
+Week-4-Machine-Learning/
+│
+├── README.md
+├── Week_4_ML_Development.ipynb
+├── confusion_matrix.png
+├── model_performance_metrics.png
+└── roc_curve.png
